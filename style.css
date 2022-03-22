@@ -81,6 +81,14 @@ input {
     margin: 3px;
     color: var(--co-dark);
     text-transform: uppercase;
+    transition: all 0.2s;
+}
+input:focus{
+    outline: none;
+    transform: scale(1.05);
+}
+input:not(:focus){
+    opacity: 0.4;
 }
 
 button {

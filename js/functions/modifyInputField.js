@@ -1,6 +1,9 @@
 import variables from "../variables.js";
 import checkRow from "./checkRow.js";
 
+function focusThis(field){
+    field.focus()
+}
 function focusNext(rowId,index){
     if(index < variables.numberOfLetters){
         const NEXT_ELEMENT = document.querySelector(`#row_${rowId}_${index + 1}`)
@@ -17,6 +20,10 @@ function focusPrev(rowId,index){
 function modifyInputField(field) {
     const INDEX = parseInt(field.dataset.index)
     const ROWID = parseInt(field.dataset.rowid)
+
+    if(INDEX === 1){
+        focusThis(field)
+    }
 
     field.addEventListener('input', (e) => {
         //wenn feld ausgefüllt

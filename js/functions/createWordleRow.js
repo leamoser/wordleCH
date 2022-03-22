@@ -10,7 +10,8 @@ function createWordleRow(numberOfLetters, container, rowId){
             {'data-rowid': rowId},
             {'data-index': i + 1},
             {maxlength: 1},
-            {minlenght: 1}
+            {minlenght: 1},
+            {autofocus: i === 0}
         ]))
     }
     let wrapper = createElement('DIV', '', 'wrapper', [
