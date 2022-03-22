@@ -5,6 +5,7 @@ function toggleColorMode(){
     let mode = localStorage.getItem('mode')
     if(mode === 'dark'){
         BODY.classList.add('darkmode')
+        TOGGLE.innerHTML = '🌕'
     }
     TOGGLE.addEventListener('click', () => {
         BODY.classList.toggle('darkmode')
