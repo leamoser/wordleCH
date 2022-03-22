@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+:root{
+    --co-dark: #232323;
+    --co-light: #eeeeee;
+    --wi-basic: 60px;
+    --f-size: 2rem;
+    --ga-basic: 2rem;
+    --bo-basic: 1px solid var(--co-dark);
+}
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: Karla, sans-serif;
+    position: relative;
+    color: var(--co-dark);
+}
+main{
+    background: var(--co-light);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper:not(:last-of-type){
+    opacity: 0.5;
+    pointer-events: none;
+}
+.wrapper:not(:last-of-type)::after{
+    content: '🔒';
+    position: absolute;
+    display: inline-block;
+    font-size: var(--f-size);
+}
+
+main>p{
+    font-size: var(--f-size);
+    position: fixed;
+    top: var(--ga-basic);
+}
+input{
+    background: var(--co-light);
+    width: var(--wi-basic);
+    height: var(--wi-basic);
+    border: var(--bo-basic);
+    border-radius: 0;
+    text-align: center;
+    font-size: var(--f-size);
+    margin: 3px;
+    color: var(--co-dark);
+    text-transform: uppercase;
+}
+button{
+    width: calc(100% - calc( 2rem * 2 ));
+    position: fixed;
+    bottom: var(--ga-basic);
+    left: var(--ga-basic);
+    border: var(--bo-basic);
+    background: var(--co-light);
+    font-size: var(--f-size);
+    padding: 10px;
+    cursor: pointer;
+}
