@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
-:root{
+
+body{
     --co-dark: #232323;
     --co-light: #eeeeee;
     --wi-basic: 60px;
@@ -7,7 +8,25 @@
     --ga-basic: 2rem;
     --bo-basic: 1px solid var(--co-dark);
 }
-*{
+body.darkmode{
+    --co-dark: #eeeeee;
+    --co-light: #232323;
+}
+div#mode{
+    position: fixed;
+    width: var(--wi-basic);
+    height: var(--wi-basic);
+    border: var(--bo-basic);
+    top: -1px;
+    right: var(--ga-basic);
+    font-size: var(--f-size);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+* {
     margin: 0 0;
     padding: 0 0;
     box-sizing: border-box;
@@ -15,7 +34,8 @@
     position: relative;
     color: var(--co-dark);
 }
-main{
+
+main {
     background: var(--co-light);
     width: 100vw;
     height: 100vh;
@@ -24,29 +44,33 @@ main{
     justify-content: center;
     align-items: center;
 }
-.wrapper{
+
+.wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.wrapper:not(:last-of-type){
+
+.wrapper:not(:last-of-type) {
     opacity: 0.5;
     pointer-events: none;
 }
-.wrapper:not(:last-of-type)::after{
+
+.wrapper:not(:last-of-type)::after {
     content: '🔒';
     position: absolute;
     display: inline-block;
     font-size: var(--f-size);
 }
 
-main>p{
+main > p {
     font-size: var(--f-size);
     position: fixed;
     top: var(--ga-basic);
 }
-input{
+
+input {
     background: var(--co-light);
     width: var(--wi-basic);
     height: var(--wi-basic);
@@ -58,8 +82,9 @@ input{
     color: var(--co-dark);
     text-transform: uppercase;
 }
-button{
-    width: calc(100% - calc( 2rem * 2 ));
+
+button {
+    width: calc(100% - calc(2rem * 2));
     position: fixed;
     bottom: var(--ga-basic);
     left: var(--ga-basic);
