@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
-
+*{
+    transition: all 0.2s;
+}
 body{
     --co-dark: #232323;
     --co-dark-10: #23232319;
@@ -83,7 +85,6 @@ input {
     margin: 3px;
     color: var(--co-dark);
     text-transform: uppercase;
-    transition: all 0.2s;
 }
 input:focus{
     outline: none;
@@ -95,7 +96,7 @@ input:not(:focus){
 }
 
 button {
-    width: calc(100% - calc(2rem * 2));
+    width: calc(100% - calc(var(--ga-basic) * 2));
     position: fixed;
     bottom: var(--ga-basic);
     left: var(--ga-basic);
@@ -104,4 +105,12 @@ button {
     font-size: var(--f-size);
     padding: 10px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        --wi-basic: 40px;
+        --f-size: 1.2rem;
+        --ga-basic: 1.2rem;
+    }
 }
