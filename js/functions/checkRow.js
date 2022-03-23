@@ -9,6 +9,7 @@ function checkRow(wrapper){
     const ROWID = wrapper.dataset.rowid
     const FIELDS = document.querySelectorAll(`.row_${ROWID}`)
     const WORD = localStorage.getItem('word')
+    const NUMBER_OF_ROWS = document.querySelectorAll('.wrapper').length
 
     let numberOfCorrectLetters = 0
     let allFieldsFilled = true
@@ -17,6 +18,7 @@ function checkRow(wrapper){
     })
 
     if(allFieldsFilled){
+
         for (let i = 0; i < WORD.length; i++){
             let correctLetter = WORD.toUpperCase().includes(FIELDS[i].value.toUpperCase()) && FIELDS[i].value !== ''
             let correctLetterAtCorrectPlace = FIELDS[i].value.toUpperCase() === WORD[i].toUpperCase()
@@ -35,11 +37,17 @@ function checkRow(wrapper){
         }
 
         if(numberOfCorrectLetters < variables.numberOfLetters){
-            createWordleRow(variables.numberOfLetters,variables.container,ROWID + 1)
+            if(NUMBER_OF_ROWS >= variables.maxNumberOfTrys){
+                generateEmojiResult();
+                placeElements(wrapper.parentElement, [restart])
+            }else{
+                createWordleRow(variables.numberOfLetters,variables.container,ROWID + 1)
+            }
         }else{
             generateEmojiResult()
             placeElements(wrapper.parentElement, [restart])
         }
+
     }
 
 }
