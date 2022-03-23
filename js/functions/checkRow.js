@@ -3,6 +3,7 @@ import createWordleRow from "./createWordleRow.js";
 import placeElements from "../helpers/placeElements.js";
 import restart from "../elements/restartButton.js";
 import generateEmojiResult from "./generateEmojiResult.js";
+import styleField from "./styleField.js";
 
 function checkRow(wrapper){
 
@@ -23,17 +24,13 @@ function checkRow(wrapper){
             let correctLetter = WORD.toUpperCase().includes(FIELDS[i].value.toUpperCase()) && FIELDS[i].value !== ''
             let correctLetterAtCorrectPlace = FIELDS[i].value.toUpperCase() === WORD[i].toUpperCase()
             if(correctLetter && correctLetterAtCorrectPlace) {
-                FIELDS[i].style.background = variables.colors.positive
-                FIELDS[i].setAttribute('data-state', 'positive')
+                styleField(FIELDS[i], 'correct')
                 numberOfCorrectLetters++
             }else if(correctLetter && !correctLetterAtCorrectPlace){
-                FIELDS[i].style.background = variables.colors.warning
-                FIELDS[i].setAttribute('data-state', 'warning')
+                styleField(FIELDS[i], 'contained')
             }else{
-                FIELDS[i].style.background = variables.colors.negative
-                FIELDS[i].setAttribute('data-state', 'negative')
+                styleField(FIELDS[i], 'wrong')
             }
-            FIELDS[i].setAttribute('disabled', 'true')
         }
 
         if(numberOfCorrectLetters < variables.numberOfLetters){

@@ -6,4 +6,5 @@ function placeElements(container, elements){
         container.appendChild(element)
     })
 }
+
 export default placeElements

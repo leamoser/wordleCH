@@ -10,4 +10,5 @@ async function fetchWords(path){
             return []
         });
 }
+
 export default fetchWords
