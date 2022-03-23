@@ -3,15 +3,15 @@
 body{
     --co-dark: #232323;
     --co-dark-10: #23232319;
-    --co-light: #eeeeee;
+    --co-light: #ffffff;
     --wi-basic: 60px;
     --f-size: 2rem;
     --ga-basic: 2rem;
     --bo-basic: 1px solid var(--co-dark);
 }
 body.darkmode{
-    --co-dark: #eeeeee;
-    --co-dark-10: #eeeeee19;
+    --co-dark: #ffffff;
+    --co-dark-10: #ffffff19;
     --co-light: #232323;
 }
 div#mode{
