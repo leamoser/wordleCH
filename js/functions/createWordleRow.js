@@ -1,5 +1,5 @@
-import createElement from "./createElement.js";
-import placeElements from "./placeElements.js";
+import createElement from "../helpers/createElement.js";
+import placeElements from "../helpers/placeElements.js";
 import checker from "../elements/rowChecker.js";
 
 function createWordleRow(numberOfLetters, container, rowId){

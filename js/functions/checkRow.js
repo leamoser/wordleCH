@@ -1,6 +1,6 @@
 import variables from "../variables.js";
 import createWordleRow from "./createWordleRow.js";
-import placeElements from "./placeElements.js";
+import placeElements from "../helpers/placeElements.js";
 import restart from "../elements/restartButton.js";
 import generateEmojiResult from "./generateEmojiResult.js";
 

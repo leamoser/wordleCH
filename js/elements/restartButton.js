@@ -1,4 +1,4 @@
-import createElement from "../functions/createElement.js";
+import createElement from "../helpers/createElement.js";
 let restart = createElement('BUTTON','nomol spiele', '', [
     {id: 'restart'}
 ])

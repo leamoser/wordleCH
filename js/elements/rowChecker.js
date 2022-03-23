@@ -1,4 +1,4 @@
-import createElement from "../functions/createElement.js";
+import createElement from "../helpers/createElement.js";
 import checkRow from "../functions/checkRow.js";
 
 let checker = createElement('BUTTON', 'wort überprüefe', '', [

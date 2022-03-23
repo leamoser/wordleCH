@@ -1,4 +1,4 @@
-import modifyInputField from "./modifyInputField.js";
+import modifyInputField from "../functions/modifyInputField.js";
 
 function placeElements(container, elements){
     elements.forEach(element => {
