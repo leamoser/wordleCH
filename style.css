@@ -2,6 +2,7 @@
 
 body{
     --co-dark: #232323;
+    --co-dark-10: #23232319;
     --co-light: #eeeeee;
     --wi-basic: 60px;
     --f-size: 2rem;
@@ -10,6 +11,7 @@ body{
 }
 body.darkmode{
     --co-dark: #eeeeee;
+    --co-dark-10: #eeeeee19;
     --co-light: #232323;
 }
 div#mode{
@@ -86,9 +88,10 @@ input {
 input:focus{
     outline: none;
     transform: scale(1.05);
+    background-color: var(--co-dark-10);
 }
 input:not(:focus){
-    opacity: 0.4;
+    opacity: 0.8;
 }
 
 button {
